@@ -175,7 +175,8 @@ label {
   width: 200px;
   height: 124px;
   margin-bottom: 30px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .icecream {
@@ -186,11 +187,26 @@ label {
   border-radius: 24px;
 }
 
-.icecream::after {
-  content: "";
+.products-name::after {
+  content: "000";
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
 }
 
 .products-btn {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
   color: #D41443;
   border-radius: 50px;
   width: 40px;

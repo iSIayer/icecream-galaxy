@@ -61,7 +61,8 @@ text-align: center;
     width: 200px;
     height: 124px;
     margin-bottom: 30px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 .icecream {
@@ -72,11 +73,19 @@ text-align: center;
 
 }
 
-.icecream::after {
-    content:"";
+.products-name::after {
+    content:"000";
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.products-btn{
+    width: 100%;
+    align-items: center;
 }
 
-.products-btn {
+.btn {
     color: #D41443;
     border-radius: 50px;
     width: 40px;
