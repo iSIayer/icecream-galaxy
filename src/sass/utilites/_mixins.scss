@@ -3,3 +3,23 @@
   align-items: $alitem;
   justify-content: $justcont;
 }
+
+@mixin tel {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+// @include tablet
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// @include desktop
+@mixin desktop {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
