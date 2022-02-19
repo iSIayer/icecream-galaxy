@@ -1,4 +1,28 @@
 :root {
-  --main-white-color: #ffffff;
-  --main-black-color: #000000;
+  --text-secondary: 'Titan One', sans-serif;
+  --text-white-color: #ffffff;
+  --text-black-color: #000000;
+  --text-grey-color: #907e82;
+  --text-sub-color: #ffa5ba;
+  --bg-hero-color: #ffb8ca;
+
+  // Цвет заголовков а также по макету где используется.
+  --accent-color: #d41443;
+
+  // hover & focus buttons
+  --hover-btn-dark: #d41342;
+  --hover-btn-light: #ecebeb;
+
+  // reviews-bg-color
+  --reviews-bg-color: #fafafa;
+  --reviews-line-color: #e1e1e1;
+
+  // cards-contacts-color
+  --bg-beige-color: #f0d1a5;
+  --bg-green-color: #c2e297;
+  // footer-icons
+  --icon-bg-color: #fea5bb;
+
+  // mobile-menu
+  --bg-color-mobmenu: #e17992;
 }
