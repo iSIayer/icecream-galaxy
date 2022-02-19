@@ -1,0 +1,25 @@
+%btn-light {
+  @include centerFlex();
+  background-color: var(--bg-light-btn);
+  color: var(--accent-color);
+  font-weight: bold;
+  font-family: inherit;
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-light);
+  }
+}
+
+%btn-dark {
+  @include centerFlex();
+  background-color: var(--bg-dark-btn);
+  color: var(--text-white-color);
+  font-weight: bold;
+  font-family: inherit;
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-dark);
+  }
+}
