@@ -68,11 +68,11 @@ margin-bottom: 30px;
 padding-top: 161px;
 }
 
-// .product-icecream::before {
-//     position: absolute;
-//     top: 0; left: 50%;
-//     transform: translate(-50%, -50%);
-//     content: url(../images/products/products-mob-1@1x_249x252px.png);
+.product-icecream::before {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%);
+    content: url(../images/products/products-mob-1@1x_249x252px.png);}
 
 //     @media (min-device-pixel-ratio: 2),
 //     (min-resolution: 192dpi),
