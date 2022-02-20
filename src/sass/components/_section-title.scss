@@ -1,0 +1,15 @@
+.section-title {
+  font-family: var(--text-secondary);
+  @include font(34px, 400, 1.15, 0.04em);
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-color);
+
+  @media screen and(min-width: 768px) {
+    @include font(48px, null, 1.15, null);
+  }
+  @media screen and(min-width:1280px) {
+    @include font(58px, null, 1.13, 0.06em);
+  }
+}

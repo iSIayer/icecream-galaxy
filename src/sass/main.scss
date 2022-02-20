@@ -8,10 +8,14 @@
 @import './utilites/variables';
 @import './utilites/mixins';
 @import './utilites/placeholders';
+// ==================================
 @import './base/common';
 @import './base/container';
+@import './components/section-title';
+@import './components/section-pretitle';
 @import './base/section';
 @import './base/card-set';
+// ===================================
 @import './layout/header';
 @import './layout/hero';
 @import './layout/products';
