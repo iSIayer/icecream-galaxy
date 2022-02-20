@@ -1,19 +1,54 @@
+.footer{
+    padding-top: 56px;
+    padding-bottom: 25px;
+    @include tablet{
+        padding-top: 82px;
+        padding-bottom: 18px;
+    }
+    @include desktop{
+        padding-bottom: 10px;
+    }
+}
 
 .footer__container{
     display: flex;
     flex-direction: column;
+    margin-bottom: 43px;
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 91px;
+    }
+    @include desktop{
+        margin-bottom: 97px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px){
+    .footer-title-cont{
+        max-width: 230px;
+        margin-bottom: 43px;
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+    .footer-title-cont{
+        max-width: 340px;
+    }
+    
 }
 
 
 .footer__title{
   text-align: left;  
   margin-right: auto;
-  margin-bottom: 43px;
 }
 
 .footer__pretitle{
     text-align: left;
-    margin-bottom: 17px;
 }
 
 
@@ -25,22 +60,36 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 46px;
+    @include desktop{
+        margin-bottom: 50px;
+    }
   
 }
 .social-list__item + .social-list__item{
     margin-left: 28px;
+    @include tablet{
+        margin-left: 30px;
+    }
+    @include desktop{
+        margin-left: 24px;
+    }
+    
 }
 .social-list__link{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    color: var(--icon-bg-color);
+    background-color: var(--icon-bg-color);
+    color: var(--text-white-color);
     &:focus, &:hover{
         background-color: var(--accent-color);
-        color:#ffffff;
+    }
+    @include tablet{
+        width: 34px;
+        height: 34px;
     }
 }
 .social-list__icon{
@@ -52,12 +101,32 @@
     line-height: 1.86;
     text-align: right;
     @include tablet{
-        font-size: 14px; 
+        font-size: 14px;
     }
     @include desktop{
-        font-size: 16px; 
+        font-size: 16px;
     }
 }
 .footer__contact-link{
     color: var(--accent-color);
+}
+.footer-bottom{
+    border-top:  1px solid #E1E1E1;
+  padding-top: 22px;
+  @include tablet{
+      padding-top: 29px;
+  }
+  @include desktop{
+      padding-top: 9px;
+  }
+}
+.footer-bottom__text{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.52;
+    text-align: center;
+    color: var(--text-grey-color);
+    @include tablet{
+        line-height: 1.86;
+    }
 }
