@@ -35,22 +35,28 @@
 }
 
 .about__tumb {
+  // делим флекс пополам
+  width: 50%;
+
   @media screen and (min-width: 768px) {
-    width: 340px;
+    width: 50%;
     // flex-basis: calc(100% / 2);
   }
   @media screen and (min-width: 1280px) {
-    width: 516px;
+    width: 50%;
   }
 }
-
+// картинка 100% контейнера
+.about__image {
+  width: 100%;
+}
 .about__right-box {
   margin-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
   @media screen and (min-width: 768px) {
     margin-top: 0;
-    width: 340px;
+    width: 50%;
     padding: 0;
     margin-left: 17px;
   }
