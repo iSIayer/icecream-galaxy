@@ -1,0 +1,123 @@
+.about {
+  background-color: #fff5f6;
+  padding-top: 125px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 130px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 125px;
+  }
+}
+
+.about__head {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.about__title {
+  margin-top: 15px;
+}
+
+.about__box {
+  margin-top: 26px;
+  @media screen and (min-width: 768px) {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  // flex-direction: column;
+  @media screen and (min-width: 1280px) {
+    margin-top: 55px;
+  }
+}
+
+.about__tumb {
+  @media screen and (min-width: 768px) {
+    width: 340px;
+    // flex-basis: calc(100% / 2);
+  }
+  @media screen and (min-width: 1280px) {
+    width: 516px;
+  }
+}
+
+.about__right-box {
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    width: 340px;
+    padding: 0;
+    margin-left: 17px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 463px;
+    // margin-left: 17px;
+  }
+}
+
+.about__txt-wrapper {
+  @media screen and (min-width: 768px) {
+    padding-top: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 0;
+  }
+}
+
+.about__text--bold {
+  color: var(--text-black-color);
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    line-height: 1.62;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+
+.about__text--thin {
+  margin-top: 34px;
+
+  color: var(--text-grey-color);
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+    line-height: 1.62;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    // line-height: 1.62;
+  }
+}
+
+.about__btn {
+  @extend %btn-light;
+
+  justify-content: center;
+  align-items: center;
+  margin-top: 26px;
+  min-width: 176px;
+  min-height: 44px;
+  border-radius: 22px;
+  padding-left: 37px;
+  padding-right: 38px;
+
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 62px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 45px;
+  }
+}
+.about__more {
+  // margin-left: 10px;
+  color: inherit;
+}
