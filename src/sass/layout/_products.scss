@@ -69,7 +69,22 @@ padding-right: 39px;
         margin-bottom: 130px;
     }
     }
-}
+    @media screen and (min-width: 1280px) {
+        max-width: 329px;
+        padding-left: 44px;
+        padding-right: 44px;
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+        // &:last-child {
+        // margin-bottom: 130px;
+        // padding-left: 44px;
+        // padding-right: 44px;
+        //     }
+        }
+
+
 .product-coffe {
     background-color:#F0D1A5 ;
 }
