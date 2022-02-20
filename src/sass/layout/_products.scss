@@ -42,10 +42,10 @@ margin-left: auto;
 margin-right: auto;
 margin-bottom: 130px;
 }
-.coffe {
+.product-coffe {
     background-color:#F0D1A5 ;
 }
-.milkshakes {
+.product-milkshakes {
     background-color: #C2E297;
 }
 
@@ -65,11 +65,23 @@ margin-bottom: 30px;
 padding-top: 161px;
 }
 
-.products-name::before { 
+.product-icecream::before {
     position: absolute;
     top: 0; left: 50%;
     transform: translate(-50%, -50%);
     content: url(../images/products/products-mob-1@1x_249x252px.png)
+}
+.product-coffe::before {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%);
+    content: url(../images/products/products-mob-2@1x_249x252px.png)
+}
+.product-milkshakes::before {
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%);
+    content: url(../images/products/products-mob-3@1x_249x252px.png)
 }
 
 .products-name::after {
