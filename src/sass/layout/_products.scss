@@ -2,9 +2,6 @@
     width: 100%;
 padding-top: 121px;
 padding-bottom: 98px;
-
-
-
 }
 
 .products-label {
@@ -75,22 +72,9 @@ padding-right: 39px;
         padding-right: 44px;
             &:not(:last-child) {
                 margin-right: 30px;
+                }
             }
         }
-        // &:last-child {
-        // margin-bottom: 130px;
-        // padding-left: 44px;
-        // padding-right: 44px;
-        //     }
-        }
-
-
-.product-coffe {
-    background-color:#F0D1A5 ;
-}
-.product-milkshakes {
-    background-color: #C2E297;
-}
 
 
 .products-name {
@@ -147,8 +131,6 @@ padding-top: 161px;
     }
     }
 
-
-
 .product-coffe::before {
     position: absolute;
     top: 0; left: 50%;
@@ -195,4 +177,11 @@ margin-bottom: 41px;
 }
 .icon-arrow {
     fill: #D41443;
+}
+
+.color-coffe {
+    background-color: #F0D1A5;
+}
+.color-milk {
+    background-color: #C2E297
 }
