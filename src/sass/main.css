@@ -169,15 +169,6 @@ body {
   padding-top: 161px;
 }
 
-.product-icecream::before {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  content: url(../images/products/products-mob-1@1x_249x252px.png);
-}
-
 .product-coffe::before {
   position: absolute;
   top: 0;
