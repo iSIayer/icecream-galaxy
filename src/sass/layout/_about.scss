@@ -6,9 +6,11 @@
   @media screen and (min-width: 320px) and (max-width: 767px) {
     background-image: url(../images/about/about-mob-bg@1x_320x133px.png);
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
+    // @media screen and (min-device-pixel-ratio: 2),
+    //   screen and (min-resolution: 192dpi),
+    //   screen and (min-resolution: 2dppx)
+
+    @include appleimg {
       background-image: url(../images/about/about-mob-bg@2x_320x133px.png);
     }
     background-repeat: no-repeat;
@@ -26,9 +28,11 @@
     //
     background-image: url(../images/about/about-desk-bg@1x_1282x534px.png);
 
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
+    // @media screen and (min-device-pixel-ratio: 2),
+    //   screen and (min-resolution: 192dpi),
+    //   screen and (min-resolution: 2dppx)
+
+    @include appleimg {
       background-image: url(../images/about/about-desk-bg@2x_1282x534px.png);
     }
     background-repeat: no-repeat;
@@ -44,16 +48,39 @@
     padding-bottom: 33px;
   }
 }
+// ===
 
+.about__pre-title {
+  margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-bottom: 16px;
+  }
+}
+
+.about__title {
+  margin-bottom: 26px;
+  @include tel {
+    margin-bottom: 50px;
+    // display: flex;
+    // justify-content: space-between;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 55px;
+  }
+}
+
+// .about__box {
+//   // @media screen and (min-width: 768px)
+
+// }
+// ===
 .about__box {
-  margin-top: 26px;
   @media screen and (min-width: 768px) {
-    margin-top: 50px;
     display: flex;
     justify-content: space-between;
   }
   @media screen and (min-width: 1280px) {
-    margin-top: 55px;
   }
 }
 
@@ -114,15 +141,6 @@
 
 .about__text--bold {
   @extend %about-fonto;
-
-  // color: var(--text-black-color);
-  // @media screen and (max-width: 767px) {
-  //   font-size: 12px;
-  //   line-height: 1.62;
-  // }
-  // @media screen and (min-width: 1280px) {
-  //   font-size: 16px;
-  // }
 }
 
 .about__text--thin {
@@ -141,22 +159,12 @@
   border-radius: 22px;
   padding-left: 37px;
   padding-right: 38px;
-
-  // text-align: center;
-
-  @media screen and (min-width: 768px) {
-    margin-top: 62px;
-  }
-  @media screen and (min-width: 1280px) {
-    margin-top: 45px;
-  }
 }
 
 .about__btn-txt {
   margin-right: 12px;
 }
 .about__more {
-  // margin-left: 10px;
   color: inherit;
 }
 
