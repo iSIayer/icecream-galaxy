@@ -1,27 +1,35 @@
 .products {
-    width: 100%;
+width: 100%;
 padding-top: 121px;
 padding-bottom: 98px;
+@media screen and (min-width: 768px) {
+    padding-top: 122px;
+    padding-bottom: 112px;
+}
+@media screen and (min-width: 1280px) {
+    padding-top: 127px;
+    padding-bottom: 119px;
+}
 }
 
 .products-label {
-    font-family: "Titan One";
+font-family:var(--text-secondary);
 font-size: 18px;
 line-height: 1.17;
 text-align: center;
 text-transform: uppercase;
-color: #FFA5BA;
+color: var(--text-sub-color);
 margin-bottom: 15px;
 }
 
 .products-title {
-font-family: "Titan One";
+font-family:var(--text-secondary);
 font-size: 34px;
 line-height: 1.15;
 text-align: center;
 letter-spacing: 0.04em;
 text-transform: uppercase;
-color: #D41443;
+color:var(--accent-color);
 margin-bottom: 144px;
 margin-right: auto;
 margin-left: auto;
@@ -43,8 +51,6 @@ max-width: 280px;
 display: flex;
 flex-direction: column;
 align-items: center;
-
-background-color: #FFB8CA;
 border-radius: 24px;
 position: relative;
 margin-bottom: 130px;
@@ -78,7 +84,8 @@ padding-right: 39px;
 
 
 .products-name {
-font-family: "Titan One";
+    font-family:var(--text-secondary);
+    color:var(--text-white-color);
 font-style: normal;
 font-weight: normal;
 font-size: 20px;
@@ -86,7 +93,6 @@ line-height: 1.15;
 text-align: center;
 letter-spacing: 0.04em;
 text-transform: uppercase;
-color: #FFFFFF;
 margin-top: 22px;
 margin-bottom: 30px;
 padding-top: 161px;
@@ -146,7 +152,7 @@ padding-top: 161px;
 
 .products-name::after {
         content:url(../images/products/icon-ellipsis.svg);
-        color: #FFFFFF;
+        color:var(--text-white-color);
         display: flex;
         justify-content: center;
         margin-top: 30px;
@@ -157,10 +163,10 @@ padding-top: 161px;
 font-style: normal;
 font-weight: 700;
 font-size: 14px;
-line-height: 1.5;
+line-height: 1.52;
 text-align: center;
 letter-spacing: 0.04em;
-color: #FFFFFF;
+color:var(--text-white-color);
 margin-bottom: 30px;
 @media screen and (min-width: 768px){
     font-size: 14px;
@@ -174,14 +180,22 @@ border-radius: 50px;
 width: 40px;
 height: 40px;
 margin-bottom: 41px;
+box-sizing: border-box;
+	transition: all 500ms ease;
 }
+
+
 .icon-arrow {
     fill: #D41443;
 }
 
 .color-coffe {
     background-color: #F0D1A5;
+
 }
 .color-milk {
     background-color: #C2E297
+}
+.color-icecream {
+    background-color: #FFB8CA;
 }
