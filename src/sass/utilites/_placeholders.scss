@@ -1,8 +1,11 @@
 %btn-light {
   @include centerFlex();
+  box-sizing: border-box;
   background-color: var(--bg-light-btn);
   color: var(--accent-color);
   font-weight: bold;
+  font-size: 16px;
+  line-height: 1.31;
   font-family: inherit;
 
   &:hover,
