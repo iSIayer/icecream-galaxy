@@ -10,7 +10,7 @@
         padding-top: 127px;
         padding-bottom: 119px;
     }
-    }
+    
     
     .products-label {
     font-family:var(--text-secondary);
@@ -19,6 +19,12 @@
     text-transform: uppercase;
     color: var(--text-sub-color);
     margin-bottom: 15px;
+    @include tablet {
+        @include font ($fs:30px, $fw:null, $lh:1.15, $ls:null);
+    }
+    @include desktop {
+        @include font ($fs:34px, $fw:null, $lh:1.13, $ls:0.04em);
+    }
     }
     
     .products-title {
@@ -30,205 +36,140 @@
     margin-bottom: 144px;
     margin-right: auto;
     margin-left: auto;
+    @include tablet {
+        @include font ($fs:48px, $fw:null, $lh:1.14, $ls:0.04em);
+    }
+        @include desktop {
+        @include font ($fs:66px, $fw:null, $lh:1.14, $ls:0.06em);
+        }
     }
     
     .products-list {
-        @include centerFlex ($value: flex, $alitem: center, $justcont: center);
-        flex-direction: column;
-        @include tablet {
-            flex-direction: row;
-        }
-    }
-    
-    
-    .products-item {
-    @include centerFlex ($value: flex, $alitem: center, $justcont: null);
+    @include centerFlex ($value: flex, $alitem: center, $justcont: center);
     flex-direction: column;
-    position: relative;
-    max-width: 280px;
-    border-radius: 24px;
-    margin-bottom: 130px;
-    padding-left: 40px;
-    padding-right: 40px;
-    &:last-child {
-    margin-bottom: 0;}
-    
     @include tablet {
-    max-width: 220px;
-    padding-left: 11px;
-    padding-right: 11px;
-    &:not(:last-child) {
-    margin-right: 20px;}
-    
-    &:last-child {
-    margin-bottom: 130px;}
-    }
-    @include desktop {
-    max-width: 329px;
-    padding-left: 44px;
-    padding-right: 44px;
-    &:not(:last-child) {
-    margin-right: 30px;
+    align-items: start;
+    flex-direction: row;
+        }
+&__item {
+            @include centerFlex ($value: flex, $alitem: center, $justcont: null);
+            flex-direction: column;
+            position: relative;
+            max-width: 280px;
+            border-radius: 24px;
+            margin-bottom: 130px;
+            padding-left: 40px;
+            padding-right: 40px;
+            &:last-child {
+            margin-bottom: 0;}
+            
+            @include tablet {
+            max-width: 220px;
+            padding-left: 11px;
+            padding-right: 11px;
+            &:not(:last-child) {
+            margin-right: 20px;}
+            
+            &:last-child {
+            margin-bottom: 130px;}
+            }
+            @include desktop {
+            max-width: 329px;
+            padding-left: 44px;
+            padding-right: 44px;
+            &:not(:last-child) {
+            margin-right: 30px;
+                            }
+                    
+                    }
+            &::before{
+                content:"";
+                position: absolute;
+                top: 0; left: 50%;
+                transform: translate(-50%, -50%);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 252px;
+                background-position:center;
+                
+            }
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}){
+        background-color: var(--decor-color-#{$i});
+                    &::before{
+                        background-image: url(../images/products/products-mob-#{$i}@1x.png);
+                        @include appleimg {
+                            background-image: url(../images/products/products-mob-#{$i}@2x.png);
+                        }
+                        @include tablet {
+                            background-image: url(../images/products/products-tab-#{$i}@1x.png);
+                            @include appleimg {
+                                background-image: url(../images/products/products-tab-#{$i}@2x.png);
+                            }
+                        }
+                        @include desktop {
+                            background-image: url(../images/products/products-desk-#{$i}@1x.png);
+                            @include appleimg {
+                                background-image: url(../images/products/products-desk-#{$i}@2x.png);
+                            }
+                        }
                     }
                 }
             }
-    
-    
-    .products-name {
-    @include font ($fs:20px, $fw:null, $lh:1.15, $ls:0.04em);
-    font-family:var(--text-secondary);
-    color:var(--text-white-color);
-    font-style: normal;
-    font-weight: normal;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    padding-top: 161px;
-    @include desktop {
-    @include font ($fs:34px, $fw:null, $lh:1.13, $ls:0.04em);
     }
-    }
-    
-    .product-icecream::before {
-        position: absolute;
-        top: 0; left: 50%;
-        transform: translate(-50%, -50%);
-        content: url(../images/products/products-mob-1@1x_249x252px.png);
-        
-    
-        @include appleimg { 
-        content:url(../images/products/products-mob-1@2x_249x252px.png);
-        }
-    
-    
-        @include tablet {
-            // width: 740px;
-            content: url(../images/products/products-tab-1@1x_220x226px.png);
-            
-    
-            @include appleimg { 
-        content:url(../images/products/products-tab-1@2x_220x226px.png);
-        }
-        }
-        
-        @include desktop {
-            // width: 1090px;
-            content: url(../images/products/products-desk-1@1x_335x335px.png);
-            
-    
-            @include appleimg { 
-            content:url(../images/products/products-desk-1@2x_335x335px.png);
-            }
-        }
-        }
-    
-    .product-coffe::before {
-        position: absolute;
-        top: 0; left: 50%;
-        transform: translate(-50%, -50%);
-        content: url(../images/products/products-mob-2@1x_249x252px.png);
-
-        @include appleimg { 
-            content:url(../images/products/products-mob-2@2x_249x252px.png);
-            }
-        
-        
-            @include tablet {
-                width: 740px;
-                content: url(../images/products/products-tab-2@1x_220x233px.png);
-                
-        
-                @include appleimg { 
-            content:url(../images/products/products-tab-2@2x_220x233px.png);
-            }
-            }
-            
+&__name {
+            @include font ($fs:20px, $fw:null, $lh:1.15, $ls:0.04em);
+            font-family:var(--text-secondary);
+            color:var(--text-white-color);
+            font-style: normal;
+            font-weight: normal;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            padding-top: 161px;
             @include desktop {
-                width: 1090px;
-                content: url(../images/products/products-desk-2@1x_337x335px.png);
-                
-        
-                @include appleimg { 
-                content:url(../images/products/products-desk-2@2x_337x335px.png);
-                }
+            @include font ($fs:34px, $fw:null, $lh:1.13, $ls:0.04em);
             }
-    }
-
-    .product-milkshakes::before {
-        position: absolute;
-        top: 0; left: 50%;
-        transform: translate(-50%, -50%);
-        content: url(../images/products/products-mob-3@1x_249x252px.png);
-
-        @include appleimg { 
-            content:url(../images/products/products-mob-3@2x_249x252px.png);
-            }
-        
-        
-            @include tablet {
-                width: 740px;
-                content: url(../images/products/products-tab-3@1x_220x224px.png);
-                
-        
-                @include appleimg { 
-            content:url(../images/products/products-tab-3@2x_220x224px.png);
-            }
-            }
-            
-            @include desktop {
-                width: 1090px;
-                content: url(../images/products/products-desk-3@1x_335x335px.png);
-                
-        
-                @include appleimg { 
-                content:url(../images/products/products-desk-3@2x_335x335px.png);
-                }
-            }
-    }
-    
-    .products-name::after {
+        }
+&__name::after{
             content:url(../images/products/icon-ellipsis.svg);
             color:var(--text-white-color);
             display: flex;
             justify-content: center;
             margin-top: 30px;
         }
-    
-    .products-text {
-    @include font ($fs:14px, $fw:700, $lh:1.52, $ls:0.04em);
-    color:var(--text-white-color);
-    font-family: "DM Sans";
-    // font-style: normal;
-    text-align: center;
-    margin-bottom: 30px;
-    @include tablet{
-    line-height: 1.76;}
-    @include desktop{
-        font-size: 16px;
+&__text {
+            @include font ($fs:14px, $fw:700, $lh:1.52, $ls:0.04em);
+            color:var(--text-white-color);
+            font-family: "DM Sans";
+            text-align: center;
+            margin-bottom: 30px;
+            @include tablet{
+            line-height: 1.76;}
+            @include desktop{
+                font-size: 16px;
+        }
     }
-    }
+}
     
-    .btn {
+.btn {
     color: #D41443;
     border-radius: 50px;
     width: 40px;
     height: 40px;
     margin-bottom: 41px;
+    transform: rotate(0);
+    transition: 2s;
     }
-    
-    
+
+    .btn-translate {
+        transform: rotate(-90deg);
+        transition: 2s;
+    }
+
+
     .icon-arrow {
         fill: #D41443;
     }
-    
-    .color-coffe {
-        background-color: #F0D1A5;
-    
-    }
-    .color-milk {
-        background-color: #C2E297
-    }
-    .color-icecream {
-        background-color: #FFB8CA;
-    }
-    
+}
