@@ -1,6 +1,6 @@
 .gallery {
     background: linear-gradient(to bottom,
-        #FFF5F6 42%, #FFFFFF 42%);
+        #FFF5F6 40%, #FFFFFF 40%);
     padding-top: 50px;
     padding-bottom: 40px;
     
@@ -22,8 +22,8 @@
     gap: 5px 5px; 
 }
 
-.gallery__img {
-    border-radius: 13%;
+.mosaic__img {
+    border-radius: 15%;
     width: 100%;
     height: 100%;
     object-fit: cover;
