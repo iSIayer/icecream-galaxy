@@ -20,27 +20,38 @@
   }
 
   @include tablet {
-    padding-top: 6px;
+    padding-top: 102px;
     padding-bottom: 34px;
     background-image: url(../images/hero/hero-tab-2@1x_143x336px.png),
-      url(../images/hero/ellipse-pink.svg), url(../images/hero/hero-tab-1@1x_124x126px.png),
-      url(../images/hero/hero-tab-3@1x_168x133px.png);
+      url(../images/hero/hero-tab-3@1x_168x133px.png), url(../images/hero/ellipse-pink.svg),
+      url(../images/hero/hero-tab-1@1x_124x126px.png), url(../images/hero/hero-tab-16-1x.png),
+      url(../images/hero/hero-tab-23-1x.png);
     @include appleimg {
       background-image: url(../images/hero/hero-tab-2@2x_143x336px.png),
-        url(../images/hero/ellipse-pink.svg), url(../images/hero/hero-tab-1@2x_124x126px.png),
-        url(../images/hero/hero-tab-3@2x_168x133px.png);
+        url(../images/hero/hero-tab-3@2x_168x133px.png), url(../images/hero/ellipse-pink.svg),
+        url(../images/hero/hero-tab-1@2x_124x126px.png), url(../images/hero/hero-tab-16-2x.png),
+        url(../images/hero/hero-tab-23-2x.png);
     }
-    background-position: left 378px bottom, left 307px bottom 46px, left 34px bottom 28px,
-      right 34px bottom;
-    background-size: 143px 336px, 324px, 124px 126px, 168px 133px;
+    background-position: left 378px bottom, left 566px bottom, left 307px bottom 46px,
+      left 34px bottom 28px, left 691px top 94px, left 683px top 151px;
+    background-size: 143px 336px, 168px 133px, 324px, 124px 126px, 43px 44px, 51px 43px;
   }
   @include desktop {
+    padding-top: 171px;
+    padding-bottom: 56px;
     background-image: url(../images/hero/hero-desk-2@1x_236x557px.png),
-      url(../images/hero/ellipse-pink.svg);
+      url(../images/hero/hero-desk-3@1x_293x232px.png), url(../images/hero/ellipse-pink.svg),
+      url(../images/hero/hero-desk-1@1x_188x191px.png), url(../images/hero/hero-desk-16-1x.png),
+      url(../images/hero/hero-desk-23-1x.png);
     @include appleimg {
       background-image: url(../images/hero/hero-desk-2@2x_236x557px.png),
-        url(../images/hero/ellipse-pink.svg);
+        url(../images/hero/hero-desk-3@2x_293x232px.png), url(../images/hero/ellipse-pink.svg),
+        url(../images/hero/hero-desk-1@2x_188x191px.png), url(../images/hero/hero-desk-16-2x.png),
+        url(../images/hero/hero-desk-23-1x.png);
     }
+    background-position: left 594px bottom, left 878px bottom, left 475px bottom 75px,
+      left 77px bottom 45px, left 1111px top 156px, left 1098px top 248px;
+    background-size: 236px 557px, 293px 232px, 538px, 188px 191px, 72px 73px, 92px 76px;
   }
 }
 
@@ -48,6 +59,9 @@
   margin-left: 20px;
   @include tablet {
     margin-left: 34px;
+  }
+  @include desktop {
+    margin-left: 115px;
   }
 }
 
@@ -64,6 +78,12 @@
     font-size: 22px;
     line-height: 1.14;
   }
+  @include desktop {
+    max-width: 277px;
+    margin-bottom: 25px;
+    font-size: 38px;
+    line-height: 1.16;
+  }
 }
 
 .hero-passion {
@@ -74,6 +94,10 @@
   @include tablet {
     font-size: 31px;
     line-height: 1.1;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 0.9;
   }
 }
 
@@ -97,6 +121,10 @@
   line-height: 1.25;
   border-radius: 20px;
   padding: 10px 18px;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.29;
+  }
 }
 
 .btm-prod {
@@ -121,15 +149,24 @@
   @media screen and (max-width: 768px) {
     display: none;
   }
+  @include desktop {
+    margin-top: 112px;
+  }
 }
 
 .about-link {
+  width: 18px;
+  height: 18px;
+  display: flex;
   margin-top: 7px;
   background-color: var(--text-white-color);
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   color: var(--accent-color);
+  @include desktop {
+    margin-top: 20px;
+  }
 }
 
 .arrow_right-icon {

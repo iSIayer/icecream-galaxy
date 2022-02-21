@@ -2,7 +2,8 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
-  background-color: var(--bg-hero-color);
+  background-color: transparent;
+  position: absolute;
 
   &__container,
   &__nav {
