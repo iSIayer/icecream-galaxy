@@ -1,27 +1,47 @@
+// new version
+
 .about {
   background-color: #fff5f6;
 
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    background-image: url(../images/about/about-mob-bg@1x_320x133px.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/about/about-mob-bg@2x_320x133px.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    background-position: bottom 100px center;
+    // background-position: center;
+    background-attachment: fixed;
+    // background-attachment: scroll;
+  }
   padding-top: 125px;
   padding-bottom: 20px;
+
+  @media screen and (min-width: 1280px) {
+    //
+    background-image: url(../images/about/about-desk-bg@1x_1282x534px.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/about/about-desk-bg@2x_1282x534px.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    background-position: center;
+    background-attachment: fixed;
+    // background-attachment: scroll;
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     padding-top: 130px;
     padding-bottom: 33px;
-  }
-}
-
-.about__head {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.about__pre-title {
-  margin-bottom: 15px;
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    margin-bottom: 16px;
   }
 }
 
