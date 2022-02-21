@@ -1,4 +1,4 @@
-.contact{
+.contacts{
   padding-top: 44px;
   padding-bottom: 57px;
   background: linear-gradient(180deg, var(--text-white-color) 144px, #fff5f6 2%);
@@ -32,7 +32,7 @@
    
 }
 
-.contact__list{
+.contacts__list{
   
     margin-top: -20px;
 
@@ -50,7 +50,7 @@
 }
 
 }
-.contact__item{ 
+.contacts__item{ 
   margin-top: 20px;
   padding: 43px 20px;
   width: 220px;
@@ -82,7 +82,7 @@
 }
 
 
-.contact__title{
+.contacts__title{
   display: inline-block;  
   font-size: 12px;
   line-height: 1.83;
@@ -103,10 +103,10 @@
    line-height: 1.87;
   }
 }
-.contact__title--bg-green{
+.contacts__title--bg-green{
   background-color: var(--bg-green-color);
 }
-.contact__city{
+.contacts__city{
   font-size: 12px;
   line-height: 1.83;
   margin-bottom: 10px;
@@ -122,7 +122,7 @@
     line-height: 1.87;
   }
 }
-.contact__text{
+.contacts__text{
     @extend %contacts-greyfont; 
   
   margin-bottom: 25px;
@@ -136,7 +136,7 @@
   }
   
 }
-.contact__border{
+.contacts__border{
   border-bottom:  1px solid var(--reviews-line-color);
   margin-bottom: 25px;
   @media screen and (min-width: 768px){
@@ -146,7 +146,7 @@
     margin-bottom: 32px;
   }
 }
-.contact__border-item{
+.contacts__border-item{
     &:not(:last-child){
     margin-bottom: 10px;
     }
@@ -167,7 +167,7 @@
     }
     }
 }
-.contact__border-days{
+.contacts__border-days{
   margin-bottom: 2px;
   font-size: 12px;
   line-height: 1.5;
@@ -181,13 +181,13 @@
     line-height: 1.7;
   }
 }
-.contact__border-clock{
+.contacts__border-clock{
     @extend %contacts-pinkfont; 
     
 }
 
 
-.address__link{
+.contact__address-link{
   margin-bottom: 2px;
   font-size: 12px;
   line-height: 1.4;
@@ -202,7 +202,7 @@
   }
 }
 ///////////// BUTTONS/////////////
-.contact__buttons{ 
+.contacts__buttons{ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,7 +210,7 @@
     flex-direction: column;
   }
 }
-.contact__buttons-btn{
+.contacts__buttons-btn{
   @extend %btn-dark;
   height: 44px;
   font-size: 16px;
@@ -232,7 +232,7 @@
   
 }
 
-.contact__buttons-btn--white{
+.contacts__buttons-btn--white{
   @extend %btn-light;
   height: 44px;
   border-radius: 22px;
@@ -244,40 +244,43 @@
     padding-right: 38px;
   }
 }
-.contact__buttons-icon{
+.contacts__buttons-icon{
   margin-left: 8px;
   @media screen and (min-width: 768px){
     margin-left: 13px;
   }
 }
 //////MAPS////////
-.contact__maps.is-hidden{
-    display: none;
+.contacts__backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
 }
-.contact__backdrop{
+.contacts__backdrop.is-hidden .contacts__modal-maps {
+  transform: translate(100%, -50%) scale(0);
+}
+.contacts__backdrop{
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background-color: rgba(200,0,0,0.2);
-    opacity: 1;
-    z-index: 4;
-    transition: opacity .25s linear,visibility .25s linear;
+    transition: opacity 700ms, visibility 700ms;
 }
-.contact__modal-maps{
-    position: relative;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 1px rgb(0 0 0 / 14%), 0 2px 1px rgb(0 0 0 / 20%);
-    border-radius: 12px;
+.contacts__modal-maps{
+    position: absolute;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 12%), 0 4px 6px rgb(0 0 0 / 14%), 0 3px 2px rgb(0 0 0 / 20%);
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) scale(1);
     width: 95vw;
     height: 90vh;
     background: #FFF5F6;
     padding: 40px 0px 40px;
+    transition-duration: 550ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact__maps-img{
+.contacts__maps-img{
  position: absolute;
     bottom: 0px;
     left: 50%;  
@@ -285,18 +288,19 @@
 }
 
 
-.contact__iframe{
+.contacts__iframe{
     width: 100%;
     height: 100%;
 }
 
-.contact__close-btn {
+.contacts__close-btn {
     width: 40px;
     height: 40px;
     box-shadow: 0px 10 10px 10px rgba(0, 0, 0, 0.25);
-    background: #FFA5BA;
+    background: var( --text-sub-color);
     top:0;
     right: 0;
+    
     position: absolute;
     display: block;
     z-index: 200;
@@ -307,7 +311,7 @@
     content: '';
     width: 20px;
     height: 4px;
-    background: #fff;
+    background: var( --text-white-color);
     position: absolute;
     top: 50%;
     left: 25%;
@@ -322,6 +326,11 @@
     &:hover:after {
         transform: rotate(180deg);
         background: #BFE2FF; 
+    }
+    &:hover,
+    &:focus {
+        
+        background: var(--bg-color-mobmenu); 
     }
 }
 
