@@ -26,3 +26,159 @@
     background-color: var(--hover-btn-dark);
   }
 }
+
+// =====================================ШРИФТЫ ПО СЕКЦИЯМ=============================================
+
+// =====================HERO===========================
+
+%hero-font {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+  color: var(--text-white-color);
+
+  @media screen and(min-width: 1280px) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+// =======================ABOUT=========================
+
+// ============ВЕРХНИЙ АБЗАЦ!=============
+%about-fonto {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: var(--text-black-color);
+
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+// =============НИЖНИЙ АБЗАЦ!==============
+%about-font {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+  color: var(--text-grey-color);
+
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+
+  @media screen and(min-width: 1280px) {
+    line-height: 1.94;
+  }
+}
+
+// ==================PRODUCTS==========================
+%products-font {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.52;
+  color: #ffffff;
+
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+// =====================ADVATAGES=========================
+
+%advantages-font {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.66;
+  color: var(--text-black-color);
+
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.76;
+  }
+}
+
+// =======================REVIEWS==========================
+
+%reviews-font {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+  color: var(--text-black-color);
+
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+    line-height: 2.16;
+  }
+
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.86;
+  }
+}
+//  =======================CONTACTS=========================
+// Розовый шрифт
+%contacts-pinkfont {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: var(--text-sub-color);
+
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+
+// Заголовки контактов
+
+%contacts-blackfont {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: var(--text-black-color);
+
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+
+// Серый шрифт
+%contacts-greyfont {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-grey-color);
+
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.66;
+  }
+
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.83;
+  }
+}

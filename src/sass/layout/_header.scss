@@ -1,193 +1,188 @@
 .header {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.31;
-    background-color: var(--bg-hero-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  background-color: var(--bg-hero-color);
 
-    &__container,
-    &__nav {
-        @include centerFlex;
-    }
+  &__container,
+  &__nav {
+    @include centerFlex;
+  }
 
-    &__container {
-        @media screen and (max-width: 1279px) {
-            padding-top: 37px;
-            padding-bottom: 6px;
-        }  
-
-        @media screen and (max-width: 767px) {
-            padding-top: 6px;
-        }
-
-        @media screen and (max-width: 1279px) {
-            @include centerFlex ($justcont:space-between);
-        }   
-    }
-
-    &__nav {
-        margin-left: auto;
-        margin-right: auto;
-
-        @media screen and (max-width: 1279px) {
-            display: none;
-        }  
-    }
-
-    &__list {
-        @include centerFlex;
-    }
-
-    &__item:not(:last-child) {
-        margin-right: 35px;
-    }
-}
-
-.header__link {
-    display: block;
-    padding-top: 50px;
-    padding-bottom: 37px;
-    color: var(--text-white-color);
-    transition: color 250ms linear;
-
-    
-    &:hover,
-    &:focus,
-    &--current {
-        color: var(--accent-color);
-    }
-}
-
-.header-btn {
-    @extend %btn-light;
-    padding: 12px 37px;
-    border-radius: 22px;
-
-    &__text {
-        margin-right: 12px;
+  &__container {
+    @media screen and (max-width: 1279px) {
+      padding-top: 37px;
+      padding-bottom: 6px;
     }
 
     @media screen and (max-width: 767px) {
-        display: none;
-    }  
+      padding-top: 6px;
+    }
+
+    @media screen and (max-width: 1279px) {
+      @include centerFlex($justcont: space-between);
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include centerFlex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
 }
 
+.header__link {
+  display: block;
+  padding-top: 50px;
+  padding-bottom: 37px;
+  color: var(--text-white-color);
+  transition: color 250ms linear;
 
+  &:hover,
+  &:focus,
+  &--current {
+    color: var(--accent-color);
+  }
+}
+
+.header-btn {
+  @extend %btn-light;
+  padding: 12px 37px;
+  border-radius: 22px;
+
+  &__text {
+    margin-right: 12px;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
 
 // Menu
 
 .menu-toggle {
-    display: inline-flex;
-    margin-left: auto;
-    padding: 0;
-    border: none;
-    background-color: transparent;
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 
-    @media screen and (min-width: 1280px) {
-        display: none;
-    }  
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 
-    @media screen and (min-width: 480px) {
-        margin-right: 30px;
+  @media screen and (min-width: 480px) {
+    margin-right: 30px;
+  }
+
+  &__icon-menu {
+    stroke: var(--bg-dark-btn);
+
+    .menu-toggle:hover &,
+    .menu-toggle:focus & {
+      stroke: var(--hover-btn-light);
     }
-
-    &__icon-menu {
-        stroke: var(--bg-dark-btn);
-
-        .menu-toggle:hover &,
-        .menu-toggle:focus & {
-            stroke: var(--hover-btn-light);
-        }
-    }
+  }
 }
 
 .menu-container {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 60px; 
-    background-color: var(--bg-color-mobmenu);
-    z-index: 999;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 60px;
+  background-color: var(--bg-color-mobmenu);
+  z-index: 999;
 
-    transform: translateX(100%);
-    transition: transform 250ms linear;
+  transform: translateX(100%);
+  transition: transform 250ms linear;
 
-    @media screen and (max-width: 767px) { 
-        left: 0;
-    }  
+  @media screen and (max-width: 767px) {
+    left: 0;
+  }
 
-    @media screen and (min-width: 768px) {
-        max-width: 254px; 
-        right: 0;
-    }  
+  @media screen and (min-width: 768px) {
+    max-width: 254px;
+    right: 0;
+  }
 
-    @media screen and (min-width: 1280px) {
-        display: none;
-    }  
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .menu-container.is-open {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .menu-toggle__icon-cross {
-    position: absolute;
-    top: 23px;
-    right: 34px;
-    stroke: var(--bg-light-btn);
+  position: absolute;
+  top: 23px;
+  right: 34px;
+  stroke: var(--bg-light-btn);
 
-    &:hover,
-    &:focus {
-        stroke: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    stroke: var(--accent-color);
+  }
 }
 //  Button
 .menu-btn {
-    @extend %btn-light;
-    display: block;
-    margin-bottom: 32px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 12px 54px 12px 56px;
-    border-radius: 22px;
+  @extend %btn-light;
+  display: block;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 12px 54px 12px 56px;
+  border-radius: 22px;
+
+  &__text {
+    margin-right: 22px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-left: 47px;
+    padding-right: 45px;
 
     &__text {
-        margin-right: 22px;
+      margin-right: 17px;
     }
-
-    @media screen and (min-width: 768px) {
-        padding-left: 47px;
-        padding-right: 45px; 
-
-        &__text {
-            margin-right: 17px;
-        }
-    }  
-
+  }
 }
 
 .mobile-nav__item {
-    border-bottom: 1px solid #E18298;
+  border-bottom: 1px solid #e18298;
 
-    &:first-child {
-        border-top: 1px solid #E18298;
-    }
+  &:first-child {
+    border-top: 1px solid #e18298;
+  }
 }
 
 .mobile-nav__link {
-    display: block;
-    padding: 12px 21px;
-    width: 100%;
-    font-size: 14px;
-    line-height: 1.29;
-    color: var(--text-white-color);
+  display: block;
+  padding: 12px 21px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.29;
+  color: var(--text-white-color);
 
-
-    &:hover,
-    &:focus,
-    &--current {
-        color: var(--accent-color);
-    }
+  &:hover,
+  &:focus,
+  &--current {
+    color: var(--accent-color);
+  }
 }
