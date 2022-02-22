@@ -2,7 +2,18 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.76;
+  font-size: 12px;
   letter-spacing: 0.04em;
+  color: var(--text-black-color);
+  @media screen and(min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and(min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

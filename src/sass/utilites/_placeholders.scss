@@ -1,8 +1,11 @@
 %btn-light {
   @include centerFlex();
+  box-sizing: border-box;
   background-color: var(--bg-light-btn);
   color: var(--accent-color);
   font-weight: bold;
+  font-size: 16px;
+  line-height: 1.31;
   font-family: inherit;
 
   &:hover,
@@ -21,5 +24,111 @@
   &:hover,
   &:focus {
     background-color: var(--hover-btn-dark);
+  }
+}
+
+// =====================================ШРИФТЫ ПО СЕКЦИЯМ=============================================
+
+// =====================HERO===========================
+
+%hero-font {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+  color: var(--text-white-color);
+
+  @media screen and(min-width: 1280px) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+// =======================ABOUT=========================
+
+// ============ВЕРХНИЙ АБЗАЦ!=============
+%about-fonto {
+  line-height: 1.62;
+
+  @media screen and(min-width: 768px) {
+    line-height: 1.76;
+  }
+}
+// =============НИЖНИЙ АБЗАЦ!==============
+%about-font {
+  line-height: 1.62;
+  color: var(--text-grey-color);
+
+  @media screen and(min-width: 768px) {
+    line-height: 1.76;
+  }
+
+  @media screen and(min-width: 1280px) {
+    line-height: 1.94;
+  }
+}
+
+// ==================PRODUCTS==========================
+%products-font {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.52;
+  color: var(--text-white-color);
+
+  @media screen and(min-width: 768px) {
+    line-height: 1.76;
+  }
+}
+// =====================ADVATAGES=========================
+
+%advantages-font {
+  font-weight: bold;
+  line-height: 1.66;
+
+  @media screen and(min-width: 768px) {
+    line-height: 1.72;
+  }
+
+  @media screen and(min-width: 1280px) {
+    line-height: 1.76;
+  }
+}
+
+// =======================REVIEWS==========================
+
+%reviews-font {
+  line-height: 2.55;
+
+  @media screen and(min-width: 768px) {
+    line-height: 2.16;
+  }
+
+  @media screen and(min-width: 1280px) {
+    line-height: 1.86;
+  }
+}
+//  =======================CONTACTS=========================
+// Розовый шрифт
+%contacts-pinkfont {
+  line-height: 1.86;
+  color: var(--text-sub-color);
+}
+
+// Заголовки контактов
+
+%contacts-blackfont {
+  line-height: 1.86;
+}
+
+// Серый шрифт
+%contacts-greyfont {
+  line-height: 1.5;
+  color: var(--text-grey-color);
+
+  @media screen and(min-width: 768px) {
+    line-height: 1.66;
+  }
+
+  @media screen and(min-width: 1280px) {
+    line-height: 1.83;
   }
 }

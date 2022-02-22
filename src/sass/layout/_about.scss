@@ -1,0 +1,155 @@
+// new version
+.about {
+  padding-top: 125px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 130px;
+    padding-bottom: 33px;
+  }
+
+  background-color: #fff5f6;
+
+  @media screen and (min-width: 280px) and (max-width: 767px) {
+    background-image: url(../images/about/about-mob-bg@1x_320x133px.png);
+
+    @include appleimg {
+      background-image: url(../images/about/about-mob-bg@2x_320x133px.png);
+    }
+    background-repeat: no-repeat;
+
+    background-size: contain;
+
+    // == тут можно выбрать стиль отображения ==
+    background-position: bottom 50px center;
+    // background-position: center;
+    background-attachment: fixed;
+    // background-attachment: scroll;
+  }
+
+  @include desktop {
+    //
+    background-image: url(../images/about/about-desk-bg@1x_1282x534px.png);
+
+    @include appleimg {
+      background-image: url(../images/about/about-desk-bg@2x_1282x534px.png);
+    }
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    // == тут можно выбрать стиль отображения ==
+    background-position: bottom center;
+    // background-position: center;
+    background-attachment: fixed;
+    // background-attachment: scroll;
+  }
+}
+
+.about__pre-title {
+  margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-bottom: 16px;
+  }
+}
+
+.about__title {
+  margin-bottom: 26px;
+  @include tel {
+    margin-bottom: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 55px;
+  }
+}
+
+.about__box {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 1280px) {
+  }
+}
+
+.about__tumb {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    // делим флекс пополам
+    margin-right: 17px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+    margin-right: 74px;
+  }
+}
+// картинка 100% контейнера
+.about__image {
+  width: 100%;
+}
+.about__right-box {
+  padding-left: 30px;
+  padding-right: 30px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    width: 50%;
+    padding: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 463px;
+  }
+}
+
+.about__txt-wrapper {
+  margin-bottom: 18px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 62px;
+    padding-top: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 45px;
+    padding: 0;
+  }
+}
+
+.about__txt:not(:last-child) {
+  margin-bottom: 19px;
+  @media screen and (min-width: 767px) {
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 27px;
+  }
+}
+
+.about__text--bold {
+  @extend %about-fonto;
+}
+
+.about__text--thin {
+  @extend %about-font;
+}
+
+.about__btn {
+  @extend %btn-light;
+
+  justify-content: center;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  min-width: 176px;
+  border-radius: 22px;
+  padding-left: 37px;
+  padding-right: 38px;
+}
+
+.about__btn-txt {
+  margin-right: 12px;
+}
+
+// @extend %about-fonto;
