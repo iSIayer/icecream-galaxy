@@ -41,11 +41,6 @@
     margin-right: 35px;
   }
 
-  .is-hidden {
-    display: none;
-  }
-
-
   .header__link {
     display: block;
     padding-top: 44px;
@@ -72,6 +67,10 @@
     @media screen and (max-width: 767px) {
       display: none;
     }
+  }
+
+  .is-hidden {
+    display: none;
   }
 }
 
