@@ -1,34 +1,35 @@
 // new version
-
 .about {
   padding-top: 125px;
   padding-bottom: 20px;
 
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    padding-top: 130px;
+    padding-bottom: 33px;
+  }
+
   background-color: #fff5f6;
 
-  background-image: url(../images/about/about-mob-bg@1x_320x133px.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  // == тут можно выбрать стиль отображения ==
-  background-position: bottom 100px center;
-  // background-position: center;
-  background-attachment: fixed;
-
-  @include appleimg {
-    background-image: url(../images/about/about-mob-bg@2x_320x133px.png);
-  }
   @media screen and (min-width: 280px) and (max-width: 767px) {
+    background-image: url(../images/about/about-mob-bg@1x_320x133px.png);
+
+    @include appleimg {
+      background-image: url(../images/about/about-mob-bg@2x_320x133px.png);
+    }
+    background-repeat: no-repeat;
+
+    background-size: contain;
+
+    // == тут можно выбрать стиль отображения ==
+    background-position: bottom 50px center;
+    // background-position: center;
+    background-attachment: fixed;
+    // background-attachment: scroll;
   }
 
-  // @media screen and (min-width: 1280px)
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     //
     background-image: url(../images/about/about-desk-bg@1x_1282x534px.png);
-
-    // @media screen and (min-device-pixel-ratio: 2),
-    //   screen and (min-resolution: 192dpi),
-    //   screen and (min-resolution: 2dppx)
 
     @include appleimg {
       background-image: url(../images/about/about-desk-bg@2x_1282x534px.png);
@@ -37,17 +38,10 @@
     background-size: contain;
 
     // == тут можно выбрать стиль отображения ==
-    // background-position: center;
     background-position: bottom center;
-    // background-position: top;
-    // background-position: bottom;
+    // background-position: center;
     background-attachment: fixed;
     // background-attachment: scroll;
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    padding-top: 130px;
-    padding-bottom: 33px;
   }
 }
 
