@@ -1,0 +1,176 @@
+.hero {
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 160px;
+  padding-top: 130px;
+  background-color: var(--bg-hero-color);
+  background-image: url(../images/hero/hero-mob-2@1x_171x410px.png),
+    url(../images/hero/ellipse-pink.svg);
+  background-repeat: no-repeat;
+  background-position: left 117px bottom, left 36px bottom 79px;
+  background-size: 171px 410px, 344px;
+
+  @include tel {
+    background-image: url(../images/hero/hero-mob-2@1x_171x410px.png),
+      url(../images/hero/ellipse-pink.svg);
+    @include appleimg {
+      background-image: url(../images/hero/hero-mob-2@2x_171x410px.png),
+        url(../images/hero/ellipse-pink.svg);
+    }
+  }
+
+  @include tablet {
+    padding-top: 102px;
+    padding-bottom: 34px;
+    background-image: url(../images/hero/hero-tab-2@1x_143x336px.png),
+      url(../images/hero/hero-tab-3@1x_168x133px.png), url(../images/hero/ellipse-pink.svg),
+      url(../images/hero/hero-tab-1@1x_124x126px.png), url(../images/hero/hero-tab-16-1x.png),
+      url(../images/hero/hero-tab-16-1x.png);
+    @include appleimg {
+      background-image: url(../images/hero/hero-tab-2@2x_143x336px.png),
+        url(../images/hero/hero-tab-3@2x_168x133px.png), url(../images/hero/ellipse-pink.svg),
+        url(../images/hero/hero-tab-1@2x_124x126px.png), url(../images/hero/hero-tab-16-2x.png),
+        url(../images/hero/hero-tab-16-2x.png);
+    }
+    background-position: left 378px bottom, left 566px bottom, left 307px bottom 46px,
+      left 34px bottom 28px, left 691px top 94px, left 683px top 151px;
+    background-size: 143px 336px, 168px 133px, 324px, 124px 126px, 43px 44px, 51px 43px;
+  }
+  @include desktop {
+    padding-top: 171px;
+    padding-bottom: 56px;
+    background-image: url(../images/hero/hero-desk-2@1x_236x557px.png),
+      url(../images/hero/hero-desk-3@1x_293x232px.png), url(../images/hero/ellipse-pink.svg),
+      url(../images/hero/hero-desk-1@1x_188x191px.png), url(../images/hero/hero-desk-16-1x.png),
+      url(../images/hero/hero-desk-23-1x.png);
+    @include appleimg {
+      background-image: url(../images/hero/hero-desk-2@2x_236x557px.png),
+        url(../images/hero/hero-desk-3@2x_293x232px.png), url(../images/hero/ellipse-pink.svg),
+        url(../images/hero/hero-desk-1@2x_188x191px.png), url(../images/hero/hero-desk-16-2x.png),
+        url(../images/hero/hero-desk-23-1x.png);
+    }
+    background-position: left 594px bottom, left 970px bottom, left 475px bottom 75px,
+      left 175px bottom 45px, left 1190px top 156px, left 1170px top 248px;
+    background-size: 236px 557px, 293px 232px, 538px, 188px 191px, 72px 73px, 92px 76px;
+  }
+}
+
+// .hero-left {
+//   margin-left: 20px;
+//   @include tablet {
+//     margin-left: 34px;
+//   }
+//   @include desktop {
+//     margin-left: 115px;
+//   }
+// }
+
+// HERO-TITLE
+.hero-title {
+  font-family: 'titan One', 'DM Sans';
+  max-width: 218px;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--text-white-color);
+  margin-bottom: 20px;
+  @include tablet {
+    max-width: 162px;
+    font-size: 22px;
+    line-height: 1.14;
+  }
+  @include desktop {
+    max-width: 277px;
+    margin-bottom: 25px;
+    font-size: 38px;
+    line-height: 1.16;
+  }
+}
+
+.hero-passion {
+  font-size: 48px;
+  line-height: 0.96;
+  letter-spacing: 0em;
+  color: var(--accent-color);
+  @include tablet {
+    font-size: 31px;
+    line-height: 1.1;
+  }
+  @include desktop {
+    font-size: 58px;
+    line-height: 0.9;
+  }
+}
+
+.btm-list {
+  display: flex;
+  align-items: center;
+}
+
+.hero-btm-list:not(:last-child) {
+  margin-right: 8px;
+}
+
+.hero-btm {
+  max-width: 100%;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  border-radius: 20px;
+  padding: 10px 18px;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}
+
+.btm-prod {
+  color: var(--bg-light-btn);
+  background-color: var(--accent-color);
+}
+
+.btm-adv {
+  color: var(--accent-color);
+  background-color: var(--text-white-color);
+  border-radius: 20px;
+}
+
+.hero-about {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.5;
+  color: var(--text-white-color);
+  max-width: 114px;
+  margin-top: 66px;
+  margin-left: 154px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  @include desktop {
+    margin-top: 112px;
+  }
+}
+
+.about-link {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  margin-top: 7px;
+  background-color: var(--text-white-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--accent-color);
+  @include desktop {
+    margin-top: 20px;
+  }
+}
+
+.arrow_right-icon {
+  fill: currentColor;
+}
