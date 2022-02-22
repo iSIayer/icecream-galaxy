@@ -7,5 +7,5 @@ productsBtn.forEach(btn=>{
 function toggleText(elem){
 const hiddenText=elem.parentNode.querySelector("[data-products-text]")
 hiddenText.classList.toggle("is-hidden")
-elem.classList.toggle("btn-translate")
+elem.classList.toggle("products__btn-translate")
 }
