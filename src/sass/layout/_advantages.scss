@@ -1,0 +1,196 @@
+.advantages {
+    background-color: #FFF5F6;
+   
+    @include tel {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    @include tablet {
+        padding-top: 33px;
+        padding-bottom: 70px;
+    }
+
+    @include desktop {
+        padding-top: 20px;
+        padding-bottom: 70px;
+    }
+}
+
+.advantages__container {
+    background-color: #FFF5F6;
+    justify-content: center;
+   
+}
+
+.advantages__list {
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+    }
+    
+    @include tablet {
+        margin: 0 auto;
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+    }     
+} 
+
+.advantages__item {
+    @include tel {
+        width: 100%;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 0;
+        } 
+    }
+  
+   @include tablet {
+        width: calc(100% / 3 - 30px);
+        &:not(:last-child) {
+        margin-right: 60px;
+    }
+}
+    @include desktop {
+        &:not(:last-child) {
+        margin-right: 30px;
+        }
+    }
+}
+
+
+.advantages__item::before {
+    content: '';
+    display: inline-block;
+    height: 50px;
+    margin-bottom: 16px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include tablet {
+      margin-bottom: 36px;
+    }
+    @include desktop {
+      margin-bottom: 40px;
+    }
+}   
+
+.advantages__item:nth-child(1)::before {
+    width: 33px;
+    height: 50px;
+    background-image: url(../images/advantages/icon-1@1x.png);
+
+        @include appleimg {
+        background-image: url(../images/advantages/icon-1@2x.png);
+        object-fit: cover;
+    }
+}
+
+.advantages__item:nth-child(2)::before {
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/advantages/icon-2@1x.png);
+  @include appleimg {
+    background-image: url(../images/advantages/icon-2@2x.png); 
+  } 
+}
+
+.advantages__item:nth-child(3)::before {
+    width: 44px;
+    height: 50px;
+    background-image: url(../images/advantages/icon-3@1x.png);
+  @include appleimg {
+  background-image: url(../images/advantages/icon-3@2x.png);
+  
+  }
+}
+
+
+
+.advantages__title {
+    color: var(--accent-color);
+    font-family: var(--text-secondary);
+
+    @media screen and (min-width: 320px) {
+        font-size: 36px;
+        line-height: 1.14;
+        margin-bottom: 0;
+    }
+
+    @include tel {
+        font-size: 36px;
+        line-height: 1.14;
+        margin-bottom: 0;
+    }
+
+    @include tablet {
+        font-size: 48px;
+        line-height: 1.145;
+        margin-bottom: 13px;
+    }
+
+    @include desktop {
+        font-size: 58px;
+        line-height: 1.14;
+        margin-bottom: 15px;
+    }
+}
+
+
+.advantages__description {
+    color: var(--text-black-color);
+    font-family: DM Sans;
+    font-weight: 700;
+
+
+    @media screen and (min-width: 320px) {
+        font-size: 12px;
+        line-height: 1.70;
+        width: 230px;
+    }
+  
+    @include tel {
+        font-size: 12px;
+        line-height: 1.70;
+        margin-bottom: 38px;
+    }
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 1.74;
+        width: 180px;
+        margin-bottom: 0;
+    }
+
+    @include desktop {
+        font-size: 16px;
+        line-height: 1.76;
+        letter-spacing: 0.02em;
+        width: 330px;
+    }
+}
+
+
+.advantages__icon {
+    display: block;
+    height: 50px;
+    margin-bottom: 16px;
+
+    @include tablet {
+        margin-bottom: 36px;
+    }
+    @include desktop {
+        margin-bottom: 40px;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
