@@ -12,4 +12,4 @@ var i;!function(e){"use strict";"function"==typeof i&&i.amd?i(["jquery"],e):"und
 },{"jquery":"juYr"}],"wzuc":[function(require,module,exports) {
 "use strict";var e=s(require("jquery")),r=s(require("slick-carousel"));function s(e){return e&&e.__esModule?e:{default:e}}(0,e.default)(".reviews__slider").slick({slidesToShow:1,slidesToScroll:1,autoplay:!0,autoplaySpeed:2e3,arrows:!1,dots:!0});
 },{"jquery":"juYr","slick-carousel":"QAGU"}]},{},["wzuc"], null)
-//# sourceMappingURL=/icecream-galaxy/slider.abb46c9b.js.map
+//# sourceMappingURL=/icecream-galaxy/slider.57aae9c3.js.map
