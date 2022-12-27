@@ -23,9 +23,6 @@
 }
 
 .advantages__list {
-  // @media screen and (max-width: 767px) {
-  //     flex-wrap: wrap;
-  // }
   display: grid;
   grid-gap: 38px;
   @include tablet {
@@ -35,27 +32,6 @@
     grid-gap: 60px;
   }
 }
-
-// .advantages__item {
-//   @include tel {
-//     width: 100%;
-//     @media screen and (max-width: 767px) {
-//       margin-bottom: 0;
-//     }
-//   }
-
-//   @include tablet {
-//     width: calc(100% / 3 - 30px);
-//     &:not(:last-child) {
-//       margin-right: 60px;
-//     }
-//   }
-//   @include desktop {
-//     &:not(:last-child) {
-//       margin-right: 30px;
-//     }
-//   }
-// }
 
 .advantages__item::before {
   content: '';

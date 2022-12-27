@@ -1,0 +1,25 @@
+// --------------------------- Light button
+.first-btn {
+  @include centerFlex(flex, center, center);
+  color: var(--accent-color);
+  border-radius: 22px;
+  background-color: var(--bg-light-btn);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-light);
+  }
+}
+
+// --------------------------- Dark button
+.second-btn {
+  @include centerFlex(flex, center, center);
+  color: var(--text-white-color);
+  border-radius: 22px;
+  background-color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn-dark);
+  }
+}

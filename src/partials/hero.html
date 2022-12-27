@@ -1,38 +1,209 @@
-<section class="hero">
-  <div class="container">
-    <div class="content">
-      <div class="hero-left">
-        <h1 class="hero-title">ice cream made with <span class="hero-passion">passion</span></h1>
-        <ul class="btm-list">
-          <li class="hero-btm-list">
-            <a href="#productss" class="hero-btn hero-btn-dark">Products</a>
+<section class="hero" id="hero">
+  <div class="container hero__container">
+    <!-- Верхний контейнер героя -->
+    <div class="hero__t">
+      <div class="top__title-box">
+        <h1 class="hero__title">ice cream made with <span class="hero__passion">passion</span></h1>
+        <ul class="top__btn-list">
+          <li class="top__btn">
+            <a href="#productss" class="top__link second-btn">Products</a>
           </li>
-          <li class="hero-btm-list">
-            <a href="#about-s" class="hero-btn hero-btn-light">How it’s made?</a>
-          </li>
-        </ul>
-        <div class="hero-about">
-          <p class="hero-text-about">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et
-          </p>
-          <a href="#" target="_blank" rel="noreferrer noopener nofollow" class="about-link">
-            <img src="./images/icon/icon-arrow_right.svg" alt="more-link" width="10" height="10" />
-          </a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <ul class="numbers-list">
-          <li class="number-list__item">
-            <p class="section-title number-list__num">16</p>
-            <p class="number-list__text">cafes</p>
-          </li>
-          <li class="number-list__item">
-            <p class="section-title number-list__num">23</p>
-            <p class="number-list__text">food trucks</p>
+          <li class="top__btn">
+            <a href="#about-s" class="top__link first-btn">How it’s made?</a>
           </li>
         </ul>
       </div>
+      <ul class="top__numbers-list">
+        <li class="top__numbers-item">
+          <p class="top__number section-title">16</p>
+          <p class="top__numbers-txt">cafes</p>
+        </li>
+        <li class="top__numbers-item">
+          <p class="top__number section-title">23</p>
+          <p class="top__numbers-txt">food trucks</p>
+        </li>
+      </ul>
     </div>
+    <!-- Нижний контейнер героя -->
+    <div class="hero__bottom">
+      <p class="bottom__txt">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+      </p>
+      <a href="#gallery" class="bottom__link">
+        <img src="./images/hero/btn-arrow.png" alt="Стрелка" class="bottom-box__img" />
+      </a>
+    </div>
+  </div>
+  <div class="hero__img-container">
+    <!-- Circle -->
+    <div class="hero__icecream-circle"></div>
+    <!-- Milk -->
+    <picture>
+      <!-- webp ps -->
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/hero/hero-desk-1@1x_188x191px.webp 1x,
+          ./images/hero/hero-desk-1@2x_188x191px.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <!-- png ps -->
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/hero/hero-desk-1@1x_188x191px.png 1x,
+          ./images/hero/hero-desk-1@2x_188x191px.png 2x
+        "
+        type="image/png"
+      />
+
+      <!-- webp tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/hero/hero-tab-1@1x_124x126px.webp 1x,
+          ./images/hero/hero-tab-1@2x_124x126px.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <!-- png tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/hero/hero-tab-1@1x_124x126px.png 1x,
+          ./images/hero/hero-tab-1@2x_124x126px.png 2x
+        "
+        type="image/png"
+      />
+
+      <img
+        class="hero__milk"
+        src="/images/hero/hero-tab-1@1x_124x126px.png"
+        width="320"
+        alt="cow and milk jug"
+      />
+    </picture>
+    <!-- IceCream -->
+    <picture>
+      <!-- webp ps -->
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/hero/hero-desk-2@1x_236x557px.webp 1x,
+          ./images/hero/hero-desk-2@2x_236x557px.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <!-- png ps -->
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/hero/hero-desk-2@1x_236x557px.png 1x,
+          ./images/hero/hero-desk-2@2x_236x557px.png 2x
+        "
+        type="image/png"
+      />
+
+      <!-- webp tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/hero/hero-tab-2@1x_143x336px.webp 1x,
+          ./images/hero/hero-tab-2@2x_143x336px.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <!-- png tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/hero/hero-tab-2@1x_143x336px.png 1x,
+          ./images/hero/hero-tab-2@2x_143x336px.png 2x
+        "
+        type="image/png"
+      />
+
+      <!-- webp mob -->
+      <source
+        media="(min-width: 480px)"
+        srcset="
+          ./images/hero/hero-mob-2@1x_171x410px.webp 1x,
+          ./images/hero/hero-mob-2@2x_171x410px.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <!-- png mob -->
+      <source
+        media="(min-width: 480px)"
+        srcset="
+          ./images/hero/hero-mob-2@1x_171x410px.png 1x,
+          ./images/hero/hero-mob-2@2x_171x410px.png 2x
+        "
+        type="image/png"
+      />
+
+      <img
+        class="hero__icecream"
+        src="/images/hero/hero-mob-2@1x_171x410px.png"
+        width="320"
+        alt="cow and milk jug"
+      />
+    </picture>
+    <!-- Girl -->
+    <picture>
+      <!-- webp ps -->
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/hero/hero-desk-3@1x_293x232px.webp 1x,
+          ./images/hero/hero-desk-3@2x_293x232px.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <!-- png ps -->
+      <source
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/hero/hero-desk-3@1x_293x232px.png 1x,
+          ./images/hero/hero-desk-3@2x_293x232px.png 2x
+        "
+        type="image/png"
+      />
+
+      <!-- webp tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/hero/hero-tab-3@1x_168x133px.webp 1x,
+          ./images/hero/hero-tab-3@2x_168x133px.webp 2x
+        "
+        type="image/webp"
+      />
+
+      <!-- png tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/hero/hero-tab-3@1x_168x133px.png 1x,
+          ./images/hero/hero-tab-3@2x_168x133px.png 2x
+        "
+        type="image/png"
+      />
+
+      <img
+        class="hero__girl"
+        src="/images/hero/hero-tab-3@1x_168x133px.png"
+        width="320"
+        alt="cow and milk jug"
+      />
+    </picture>
   </div>
 </section>
